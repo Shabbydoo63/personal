@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+
+  .grid-item {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Smooch Sans', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: #ff0000;
+  }
+
+  html{
+    background-color: black;
+  }

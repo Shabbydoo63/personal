@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('giphy.gif');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll {
+    width: 600px;
+    height: 80px;
+    background-color: #ff7d7d;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+    overflow: hidden; /* Hide overflowing content */
+    transition: min-height 1.8s ease; /* Added transition */
+}
+
+.hidden-text {
+    display: none;
+    color: rgb(255, 255, 255); /* Just for visibility */
+    font-size: larger;
+}
+
+.scroll::before, .scroll::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffb3b3;
+    border-radius: 50%;
+}
+
+.scroll::before {
+    left: 5px;
+}
+
+.scroll::after {
+    right: 5px;
+}
+
+.open {
+    /*min-height: 200px;*/
+    animation: expand 0.5s linear forwards;
+}
+
+@keyframes expand {
+    0% {
+        height: 80px;
+    }
+    100% {
+        height: 600px;
+    }
+}
+
+.open .hidden-text {
+    display: block;
+}
